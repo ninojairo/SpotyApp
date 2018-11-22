@@ -1,1 +1,18 @@
-<h1>Search working</h1>
+<div class="row">
+    <div class="col">
+        <input #artist (keyup)="getArtist(artist.value)" type="text" class="form-control" placeholder="Enter your artist">
+    </div>
+</div>
+
+<div class="card-columns m-5">
+    <div class="card" *ngFor="let item of artistasEncontrados">
+        <img class="card-img-top" [src]="item.images[0].url" alt="Card image cap">
+        <div class="card-body">
+
+            <h5 class="card-title">{{item.name}}</h5>
+
+
+
+        </div>
+    </div>
+</div>
